@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Tense - Complete Grammar Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .tense-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tense-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .tense-title {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .formula-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .formula-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .formula {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .structure-item {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .structure-item:hover {
+            transform: scale(1.02);
+        }
+
+        .structure-type {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .structure-formula {
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .examples {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            color: #333;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .examples h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .example-list li {
+            background: #f7fafc;
+            margin: 5px 0;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-weight: 500;
+        }
+
+        .usage-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .usage-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .usage-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .usage-list li {
+            background: rgba(255, 255, 255, 0.7);
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f5576c;
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .time-expressions {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .time-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .time-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #2d3748;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .tense-title {
+                font-size: 2rem;
+            }
+            
+            .structure-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Present Tense Mastery</h1>
+            <p>Complete Guide to English Present Tense Forms</p>
+        </div>
+
+        <!-- Simple Present Tense -->
+        <div class="tense-card">
+            <h2 class="tense-title">Simple Present Tense</h2>
+            
+            <div class="formula-section">
+                <div class="formula-title">Main Formula</div>
+                <div class="formula">Subject + Base Form of Verb (+ s/es for 3rd person singular)</div>
+            </div>
+
+            <div class="structure-grid">
+                <div class="structure-item">
+                    <div class="structure-type">✅ AFFIRMATIVE</div>
+                    <div class="structure-formula">Subject + V1 + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">play</span> football.</li>
+                            <li>She <span class="highlight">works</span> in a bank.</li>
+                            <li>They <span class="highlight">live</span> in London.</li>
+                            <li>We <span class="highlight">study</span> English.</li>
+                            <li>He <span class="highlight">reads</span> books daily.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❌ NEGATIVE</div>
+                    <div class="structure-formula">Subject + do/does + not + V1 + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">do not play</span> football.</li>
+                            <li>She <span class="highlight">does not work</span> in a bank.</li>
+                            <li>They <span class="highlight">do not live</span> in London.</li>
+                            <li>We <span class="highlight">don't study</span> English.</li>
+                            <li>He <span class="highlight">doesn't read</span> books daily.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❓ INTERROGATIVE</div>
+                    <div class="structure-formula">Do/Does + Subject + V1 + Object?</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li><span class="highlight">Do you play</span> football?</li>
+                            <li><span class="highlight">Does she work</span> in a bank?</li>
+                            <li><span class="highlight">Do they live</span> in London?</li>
+                            <li><span class="highlight">Do we study</span> English?</li>
+                            <li><span class="highlight">Does he read</span> books daily?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-section">
+                <div class="usage-title">When to Use Simple Present</div>
+                <ul class="usage-list">
+                    <li>🔄 <strong>Habits and routines:</strong> I brush my teeth every morning.</li>
+                    <li>📍 <strong>Permanent situations:</strong> She lives in Paris.</li>
+                    <li>🌍 <strong>General truths:</strong> The sun rises in the east.</li>
+                    <li>⏰ <strong>Scheduled events:</strong> The train leaves at 9 AM.</li>
+                    <li>🎭 <strong>Stories and reviews:</strong> In this movie, the hero saves the world.</li>
+                </ul>
+            </div>
+
+            <div class="time-expressions">
+                <div class="time-title">Time Expressions</div>
+                <div class="time-grid">
+                    <div class="time-item">always</div>
+                    <div class="time-item">usually</div>
+                    <div class="time-item">often</div>
+                    <div class="time-item">sometimes</div>
+                    <div class="time-item">rarely</div>
+                    <div class="time-item">never</div>
+                    <div class="time-item">every day</div>
+                    <div class="time-item">once a week</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Present Continuous Tense -->
+        <div class="tense-card">
+            <h2 class="tense-title">Present Continuous Tense</h2>
+            
+            <div class="formula-section">
+                <div class="formula-title">Main Formula</div>
+                <div class="formula">Subject + am/is/are + V-ing + Object</div>
+            </div>
+
+            <div class="structure-grid">
+                <div class="structure-item">
+                    <div class="structure-type">✅ AFFIRMATIVE</div>
+                    <div class="structure-formula">Subject + am/is/are + V-ing + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">am playing</span> football.</li>
+                            <li>She <span class="highlight">is working</span> in the office.</li>
+                            <li>They <span class="highlight">are living</span> in London.</li>
+                            <li>We <span class="highlight">are studying</span> English.</li>
+                            <li>He <span class="highlight">is reading</span> a book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❌ NEGATIVE</div>
+                    <div class="structure-formula">Subject + am/is/are + not + V-ing + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">am not playing</span> football.</li>
+                            <li>She <span class="highlight">is not working</span> in the office.</li>
+                            <li>They <span class="highlight">are not living</span> in London.</li>
+                            <li>We <span class="highlight">aren't studying</span> English.</li>
+                            <li>He <span class="highlight">isn't reading</span> a book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❓ INTERROGATIVE</div>
+                    <div class="structure-formula">Am/Is/Are + Subject + V-ing + Object?</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li><span class="highlight">Are you playing</span> football?</li>
+                            <li><span class="highlight">Is she working</span> in the office?</li>
+                            <li><span class="highlight">Are they living</span> in London?</li>
+                            <li><span class="highlight">Are we studying</span> English?</li>
+                            <li><span class="highlight">Is he reading</span> a book?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-section">
+                <div class="usage-title">When to Use Present Continuous</div>
+                <ul class="usage-list">
+                    <li>⏰ <strong>Actions happening now:</strong> I am writing an email right now.</li>
+                    <li>🔄 <strong>Temporary situations:</strong> She is staying with her parents this week.</li>
+                    <li>📈 <strong>Changing situations:</strong> The weather is getting warmer.</li>
+                    <li>📅 <strong>Future plans:</strong> We are meeting tomorrow at 5 PM.</li>
+                    <li>😤 <strong>Repeated actions (annoyance):</strong> You are always interrupting me!</li>
+                </ul>
+            </div>
+
+            <div class="time-expressions">
+                <div class="time-title">Time Expressions</div>
+                <div class="time-grid">
+                    <div class="time-item">now</div>
+                    <div class="time-item">right now</div>
+                    <div class="time-item">at the moment</div>
+                    <div class="time-item">currently</div>
+                    <div class="time-item">today</div>
+                    <div class="time-item">this week</div>
+                    <div class="time-item">these days</div>
+                    <div class="time-item">lately</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Present Perfect Tense -->
+        <div class="tense-card">
+            <h2 class="tense-title">Present Perfect Tense</h2>
+            
+            <div class="formula-section">
+                <div class="formula-title">Main Formula</div>
+                <div class="formula">Subject + have/has + V3 (Past Participle) + Object</div>
+            </div>
+
+            <div class="structure-grid">
+                <div class="structure-item">
+                    <div class="structure-type">✅ AFFIRMATIVE</div>
+                    <div class="structure-formula">Subject + have/has + V3 + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">have played</span> football.</li>
+                            <li>She <span class="highlight">has worked</span> here for 5 years.</li>
+                            <li>They <span class="highlight">have lived</span> in London.</li>
+                            <li>We <span class="highlight">have studied</span> English.</li>
+                            <li>He <span class="highlight">has read</span> this book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❌ NEGATIVE</div>
+                    <div class="structure-formula">Subject + have/has + not + V3 + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">have not played</span> football.</li>
+                            <li>She <span class="highlight">has not worked</span> here before.</li>
+                            <li>They <span class="highlight">have not lived</span> in London.</li>
+                            <li>We <span class="highlight">haven't studied</span> English.</li>
+                            <li>He <span class="highlight">hasn't read</span> this book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❓ INTERROGATIVE</div>
+                    <div class="structure-formula">Have/Has + Subject + V3 + Object?</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li><span class="highlight">Have you played</span> football?</li>
+                            <li><span class="highlight">Has she worked</span> here before?</li>
+                            <li><span class="highlight">Have they lived</span> in London?</li>
+                            <li><span class="highlight">Have we studied</span> English?</li>
+                            <li><span class="highlight">Has he read</span> this book?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-section">
+                <div class="usage-title">When to Use Present Perfect</div>
+                <ul class="usage-list">
+                    <li>✅ <strong>Completed actions (unspecified time):</strong> I have visited Paris.</li>
+                    <li>📊 <strong>Life experiences:</strong> She has traveled to many countries.</li>
+                    <li>⏳ <strong>Actions continuing to present:</strong> We have lived here for 10 years.</li>
+                    <li>🔄 <strong>Recent actions with present relevance:</strong> He has just finished his work.</li>
+                    <li>📈 <strong>Repeated actions:</strong> I have seen this movie three times.</li>
+                </ul>
+            </div>
+
+            <div class="time-expressions">
+                <div class="time-title">Time Expressions</div>
+                <div class="time-grid">
+                    <div class="time-item">already</div>
+                    <div class="time-item">yet</div>
+                    <div class="time-item">just</div>
+                    <div class="time-item">recently</div>
+                    <div class="time-item">ever</div>
+                    <div class="time-item">never</div>
+                    <div class="time-item">for</div>
+                    <div class="time-item">since</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Present Perfect Continuous Tense -->
+        <div class="tense-card">
+            <h2 class="tense-title">Present Perfect Continuous Tense</h2>
+            
+            <div class="formula-section">
+                <div class="formula-title">Main Formula</div>
+                <div class="formula">Subject + have/has + been + V-ing + Object</div>
+            </div>
+
+            <div class="structure-grid">
+                <div class="structure-item">
+                    <div class="structure-type">✅ AFFIRMATIVE</div>
+                    <div class="structure-formula">Subject + have/has + been + V-ing + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">have been playing</span> football.</li>
+                            <li>She <span class="highlight">has been working</span> here for 5 years.</li>
+                            <li>They <span class="highlight">have been living</span> in London.</li>
+                            <li>We <span class="highlight">have been studying</span> English.</li>
+                            <li>He <span class="highlight">has been reading</span> this book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❌ NEGATIVE</div>
+                    <div class="structure-formula">Subject + have/has + not + been + V-ing + Object</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li>I <span class="highlight">have not been playing</span> football.</li>
+                            <li>She <span class="highlight">has not been working</span> here long.</li>
+                            <li>They <span class="highlight">have not been living</span> in London.</li>
+                            <li>We <span class="highlight">haven't been studying</span> English.</li>
+                            <li>He <span class="highlight">hasn't been reading</span> this book.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="structure-item">
+                    <div class="structure-type">❓ INTERROGATIVE</div>
+                    <div class="structure-formula">Have/Has + Subject + been + V-ing + Object?</div>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <ul class="example-list">
+                            <li><span class="highlight">Have you been playing</span> football?</li>
+                            <li><span class="highlight">Has she been working</span> here long?</li>
+                            <li><span class="highlight">Have they been living</span> in London?</li>
+                            <li><span class="highlight">Have we been studying</span> English?</li>
+                            <li><span class="highlight">Has he been reading</span> this book?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-section">
+                <div class="usage-title">When to Use Present Perfect Continuous</div>
+                <ul class="usage-list">
+                    <li>⏰ <strong>Duration until now:</strong> I have been waiting for 2 hours.</li>
+                    <li>🔄 <strong>Ongoing actions:</strong> She has been studying medicine for 6 years.</li>
+                    <li>😴 <strong>Recent activity (with evidence):</strong> You look tired. Have you been running?</li>
+                    <li>📈 <strong>Temporary situations:</strong> We have been staying at a hotel.</li>
+                    <li>🎯 <strong>Emphasis on duration:</strong> How long have you been learning English?</li>
+                </ul>
+            </div>
+
+            <div class="time-expressions">
+                <div class="time-title">Time Expressions</div>
+                <div class="time-grid">
+                    <div class="time-item">for</div>
+                    <div class="time-item">since</div>
+                    <div class="time-item">how long</div>
+                    <div class="time-item">all day</div>
+                    <div class="time-item">all morning</div>
+                    <div class="time-item">lately</div>
+                    <div class="time-item">recently</div>
+                    <div class="time-item">all week</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🎯 Master English Present Tense!</h3>
+            <p>Practice these structures daily to improve your English fluency.</p>
+            <p>Remember: <strong>Practice makes perfect!</strong></p>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
+                Created for English learners worldwide 🌍
+            </p>
+        </div>
+    </div>
+</body>
+</html>
